@@ -1,0 +1,11 @@
+[package]
+name = 'SatayLiquidswapBricks'
+version = '1.0.0'
+
+[addresses]
+aries_blocks = "0x659d53b22ebb61ef1f64d28698b8117f65136d8bb211d6d22f54d5064eec08f5"
+
+[dependencies.Aries]
+git = 'https://github.com/satay-protocol/aries-market'
+rev = 'master'
+subdir = 'packages/aries'

@@ -1,9 +1,9 @@
 [package]
-name = 'SatayLiquidswapBricks'
+name = 'SatayLiquidswapBlocks'
 version = '1.0.0'
 
 [addresses]
-liquidswap_bricks = "0x659d53b22ebb61ef1f64d28698b8117f65136d8bb211d6d22f54d5064eec08f5"
+liquidswap_blocks = "0x659d53b22ebb61ef1f64d28698b8117f65136d8bb211d6d22f54d5064eec08f5"
 
 [dependencies.LiquidswapRouterV2]
 git = 'https://github.com/pontem-network/liquidswap.git'

@@ -1,0 +1,15 @@
+[package]
+name = 'SatayDittoBlocks'
+version = '1.0.0'
+
+[addresses]
+ditto_blocks = "0x659d53b22ebb61ef1f64d28698b8117f65136d8bb211d6d22f54d5064eec08f5"
+
+[dependencies.HippoAggregator]
+git = 'https://github.com/hippospace/hippo-agg-interface'
+rev = 'main'
+
+[dependencies.ditto-staking]
+git = 'https://github.com/satay-protocol/ditto-interface'
+rev = 'testnet'
+subdir = 'ditto-staking-interface'
