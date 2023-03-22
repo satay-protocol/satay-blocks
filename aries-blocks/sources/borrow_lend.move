@@ -7,6 +7,11 @@ module aries_blocks::borrow_lend {
     use aries::controller;
     use aries::profile::CheckEquity;
 
+    /// register a new user with `profile_name`
+    public entry fun register_user(account: &signer, profile_name: vector<u8>) {
+        controller::register_user(account, profile_name);
+    }
+
     /// deposit `amount` of `CoinType` to Aries Markets
     public entry fun deposit<CoinType>(account: &signer, profile_name: vector<u8>, amount: u64) {
         controller::deposit<CoinType>(account, profile_name, amount, false);
