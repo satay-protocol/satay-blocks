@@ -6,6 +6,9 @@ module aries_blocks::borrow_lend {
 
     use aries::controller;
     use aries::profile::CheckEquity;
+    use aries::profile;
+    use std::string;
+    use aptos_std::type_info;
 
     /// register a new user with `profile_name`
     public entry fun register_user(account: &signer, profile_name: vector<u8>) {
@@ -74,5 +77,13 @@ module aries_blocks::borrow_lend {
 
     public fun end_flash_loan<CoinType>(receipt: CheckEquity, coin: Coin<CoinType>) {
         controller::end_flash_loan<CoinType>(receipt, coin);
+    }
+
+    public fun get_deposit_amount<CoinType>(account_addr: address, profile_name: vector<u8>): u64 {
+        profile::get_deposited_amount(
+            account_addr,
+            &string::utf8(profile_name),
+            type_info::type_of<CoinType>()
+        )
     }
 }
