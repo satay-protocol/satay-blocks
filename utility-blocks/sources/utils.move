@@ -34,4 +34,10 @@ module satay::utils {
         option::destroy_none(coin_opt);
         coin
     }
+
+    public fun merge_coin_and_coin_opt<CoinType>(coin: Coin<CoinType>, coin_opt: Option<Coin<CoinType>>): Coin<CoinType> {
+        let coin_opt_unwrap = unwrap_coin_opt(coin_opt);
+        coin::merge(&mut coin, coin_opt_unwrap);
+        coin
+    }
 }
