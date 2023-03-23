@@ -1,0 +1,11 @@
+[package]
+name = 'SatayUtilityBlocks'
+version = '1.0.0'
+
+[addresses]
+satay = "0x659d53b22ebb61ef1f64d28698b8117f65136d8bb211d6d22f54d5064eec08f5"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "main"
+subdir = "aptos-move/framework/aptos-framework"
