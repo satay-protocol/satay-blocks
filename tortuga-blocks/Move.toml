@@ -12,7 +12,7 @@ rev = 'main'
 [dependencies.TortugaGovernance]
 git = 'https://github.com/satay-protocol/partner-interfaces'
 rev = 'mainnet'
-subdir = 'tortuga-governance'
+subdir = 'tortuga/tortuga-governance'
 
 [dependencies.SatayUtilityBlocks]
 local = '../utility-blocks'
