@@ -18,6 +18,10 @@ module satay::utils {
     }
 
     public fun check_and_deposit<X>(sender: &signer, coin: Coin<X>) {
+        if(coin::value(&coin) == 0) {
+            coin::destroy_zero(coin);
+            return
+        };
         let sender_addr = signer::address_of(sender);
         if (!coin::is_account_registered<X>(sender_addr)) {
             coin::register<X>(sender);
