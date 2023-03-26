@@ -1,4 +1,4 @@
-module satay::tortuga_blocks {
+module satay_blocks::tortuga_blocks {
 
     use aptos_framework::coin::{Self, Coin};
     use aptos_framework::aptos_coin::AptosCoin;
@@ -7,7 +7,7 @@ module satay::tortuga_blocks {
 
     use hippo_aggregator::aggregator;
 
-    use satay::utils;
+    use satay_blocks::utils;
 
     public entry fun deposit<Y, Z, E2, E3>(
         sender: &signer,

@@ -3,7 +3,7 @@ name = 'SatayLiquidswapBlocks'
 version = '1.0.0'
 
 [addresses]
-liquidswap_blocks = "0x659d53b22ebb61ef1f64d28698b8117f65136d8bb211d6d22f54d5064eec08f5"
+satay_blocks = "0xe3eaddfcc4d7436d26fef92ee39685ef176e3513dc736d116129ce055c07afac"
 
 [dependencies.LiquidswapRouterV2]
 git = 'https://github.com/pontem-network/liquidswap.git'

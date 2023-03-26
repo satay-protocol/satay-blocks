@@ -1,5 +1,5 @@
 #[test_only]
-module liquidswap_blocks::test_one_sided_uncorrelated_lp {
+module satay_blocks::test_one_sided_uncorrelated_lp {
 
     use std::signer;
 
@@ -14,7 +14,7 @@ module liquidswap_blocks::test_one_sided_uncorrelated_lp {
     use liquidswap::math;
     use liquidswap::curves::Uncorrelated;
 
-    use liquidswap_blocks::one_sided_uncorrelated_lp;
+    use satay_blocks::one_sided_uncorrelated_lp;
 
     // constants
 

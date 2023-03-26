@@ -1,4 +1,4 @@
-module satay::aries_blocks {
+module satay_blocks::aries_blocks {
 
     use std::string;
 

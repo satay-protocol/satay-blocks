@@ -1,4 +1,4 @@
-module liquidswap_blocks::one_sided_uncorrelated_lp {
+module satay_blocks::one_sided_uncorrelated_lp {
 
     use std::signer;
 

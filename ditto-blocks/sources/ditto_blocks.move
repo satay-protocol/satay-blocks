@@ -1,4 +1,4 @@
-module ditto_blocks::stake_unstake {
+module satay_blocks::ditto_blocks {
 
     use aptos_framework::coin::Coin;
     use aptos_framework::aptos_coin::AptosCoin;

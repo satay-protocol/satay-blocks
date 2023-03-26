@@ -1,4 +1,4 @@
-module satay::utils {
+module satay_blocks::utils {
 
     use std::signer;
     use std::option::{Self, Option};
