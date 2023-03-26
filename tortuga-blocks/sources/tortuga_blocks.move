@@ -6,6 +6,7 @@ module satay::tortuga_blocks {
     use tortuga_governance::staked_aptos_coin::StakedAptosCoin;
 
     use hippo_aggregator::aggregator;
+
     use satay::utils;
 
     public entry fun deposit<Y, Z, E2, E3>(

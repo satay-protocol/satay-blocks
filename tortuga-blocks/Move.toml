@@ -3,18 +3,16 @@ name = 'SatayTortugaBlocks'
 version = '1.0.0'
 
 [addresses]
-satay = "0x659d53b22ebb61ef1f64d28698b8117f65136d8bb211d6d22f54d5064eec08f5"
+satay = "0xe3eaddfcc4d7436d26fef92ee39685ef176e3513dc736d116129ce055c07afac"
 
 [dependencies.HippoAggregator]
-git = 'https://github.com/hippospace/hippo-agg-interface'
+git = 'https://github.com/satay-protocol/hippo-aggregator'
 rev = 'main'
 
-[dependencies.tortuga]
+[dependencies.TortugaGovernance]
 git = 'https://github.com/satay-protocol/partner-interfaces'
 rev = 'testnet'
-subdir = 'tortuga-staking-interface'
-
-
+subdir = 'tortuga-governance'
 
 [dependencies.SatayUtilityBlocks]
 local = '../utility-blocks'
