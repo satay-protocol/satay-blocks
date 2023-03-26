@@ -1,4 +1,4 @@
-module aries_blocks::borrow_lend {
+module satay::aries_blocks {
 
     use std::string::String;
 
