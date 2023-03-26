@@ -7,6 +7,10 @@ module satay_blocks::aries_blocks {
     use aries::controller;
     use aries::profile;
 
+    use oracle::oracle;
+
+    use decimal::decimal::Decimal;
+
     /// register a new user with `profile_name`
     public entry fun register_user(account: &signer, profile_name: vector<u8>) {
         controller::register_user(account, profile_name);
@@ -80,5 +84,17 @@ module satay_blocks::aries_blocks {
             &string::utf8(profile_name),
             type_info::type_of<CoinType>()
         )
+    }
+
+    public fun get_borrowed_amount<CoinType>(account_addr: address, profile_name: vector<u8>): Decimal {
+        profile::get_borrowed_amount(
+            account_addr,
+            &string::utf8(profile_name),
+            type_info::type_of<CoinType>()
+        )
+    }
+
+    public fun get_price<CoinType>(): Decimal {
+        oracle::get_price(type_info::type_of<CoinType>())
     }
 }

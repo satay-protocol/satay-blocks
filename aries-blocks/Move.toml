@@ -8,4 +8,4 @@ satay_blocks = "0xe3eaddfcc4d7436d26fef92ee39685ef176e3513dc736d116129ce055c07af
 [dependencies.Aries]
 git = 'https://github.com/satay-protocol/partner-interfaces'
 rev = 'mainnet'
-subdir = 'aries-interface'
+subdir = 'aries/aries-interface'
