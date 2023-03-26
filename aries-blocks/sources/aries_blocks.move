@@ -1,18 +1,20 @@
 module satay::aries_blocks {
 
-    use std::string::String;
+    use std::string;
 
-    use aptos_framework::coin::Coin;
+    use aptos_std::type_info;
 
     use aries::controller;
-    use aries::profile::CheckEquity;
     use aries::profile;
-    use std::string;
-    use aptos_std::type_info;
 
     /// register a new user with `profile_name`
     public entry fun register_user(account: &signer, profile_name: vector<u8>) {
         controller::register_user(account, profile_name);
+    }
+
+    /// add a new subaccount for `account` named `profile_name`
+    public entry fun add_subaccount(account: &signer, profile_name: vector<u8>) {
+        controller::add_subaccount(account, profile_name);
     }
 
     /// deposit `amount` of `CoinType` to Aries Markets
@@ -35,6 +37,7 @@ module satay::aries_blocks {
         controller::withdraw<CoinType>(account, profile_name, amount, false);
     }
 
+    /// make a leveraged swap of `amount` using Aries and Hippo router
     public entry fun leveraged_swap<InCoin, Y, Z, OutCoin, E1, E2, E3>(
         account: &signer,
         profile_name: vector<u8>,
@@ -69,14 +72,6 @@ module satay::aries_blocks {
             third_pool_type,
             third_is_x_to_y
         );
-    }
-
-    public fun begin_flash_loan<CoinType>(account: &signer, profile_name: String, amount: u64): (CheckEquity, Coin<CoinType>) {
-        controller::begin_flash_loan<CoinType>(account, profile_name, amount)
-    }
-
-    public fun end_flash_loan<CoinType>(receipt: CheckEquity, coin: Coin<CoinType>) {
-        controller::end_flash_loan<CoinType>(receipt, coin);
     }
 
     public fun get_deposit_amount<CoinType>(account_addr: address, profile_name: vector<u8>): u64 {
