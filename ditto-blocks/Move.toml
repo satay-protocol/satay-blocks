@@ -13,3 +13,6 @@ rev = 'main'
 git = 'https://github.com/satay-protocol/ditto-interface'
 rev = 'testnet'
 subdir = 'ditto-staking-interface'
+
+[dependencies.SatayUtilityBlocks]
+local = '../utility-blocks'
