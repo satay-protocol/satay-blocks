@@ -16,6 +16,11 @@ module satay_blocks::aries_blocks {
         controller::register_user(account, profile_name);
     }
 
+    /// register a new user with a referrer
+    public entry fun register_user_with_referrer(account: &signer, profile_name: vector<u8>, referrer: address) {
+        controller::register_user_with_referrer(account, profile_name, referrer);
+    }
+
     /// add a new subaccount for `account` named `profile_name`
     public entry fun add_subaccount(account: &signer, profile_name: vector<u8>) {
         controller::add_subaccount(account, profile_name);
